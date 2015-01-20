@@ -7,8 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="banner">
+<%= image_tag("rails.png", :size => "100*50")%>
+Zaid
+</div>
+<div id="columns">
+<ul>
+<li><%=link_to "questions"%></li>
+</ul>
+</div>
+
+<div id="nav">
+<ul>
+<li></li>
+</ul>
+</div>
+
 
 <%= yield %>
+
 
 </body>
 </html>
