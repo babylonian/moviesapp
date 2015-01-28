@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  reg: MyString
+  make: MyString
+  model: MyString
+  engine: MyString
+  size: 1
+  price: 1
+  photo: MyString
+  description: MyString
+
+two:
+  reg: MyString
+  make: MyString
+  model: MyString
+  engine: MyString
+  size: 1
+  price: 1
+  photo: MyString
+  description: MyString

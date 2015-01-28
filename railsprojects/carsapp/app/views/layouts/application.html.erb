@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+<div id="container">
+	<div id="header">
+		<h1>
+		<head>
+<style> 
+body {
+    background-image: url("../assets/rails.jpg"), url("img_flwr.gif");
+    background-color: #cccccc;
+}
+</style>
+</head>
+			  <title>Carsapp</title>
+  
+		</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+		   <li><%= link_to 'Home' %> </li>
+	      <li><%= link_to 'Place ad', new_car_path %> </li>
+		  <li><%= link_to 'view cars',cars_path %> </li>
+		   <li><%= link_to 'search cars',new_car_path %> </li>
+		  <li><%= link_to 'Sign up/Sign in',new_car_path %> </li>
+		</ul>
+	</div>
+	<div id="banner">
+	
+	</div>
+	<div id="footer">
+		Copyright © Site Zaid application, 2015
+		Mary Regan
+	</div>
+</div>
+
+<%= yield %>
+</head>
+
