@@ -1,13 +1,25 @@
 Carsapp::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
   resources :users
 
   resources :ads
 
   resources :cars
+  
+  resources :sessions
+
 
   get "pages/home"
 
   get "pages/about"
+
+	match '/signin',  :to => 'sessions#new'
+	match '/signout', :to => 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

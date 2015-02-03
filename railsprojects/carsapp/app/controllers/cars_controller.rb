@@ -1,6 +1,7 @@
 class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
+  
   def index
     @cars = Car.all
 
@@ -80,6 +81,7 @@ class CarsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
   
   
 end

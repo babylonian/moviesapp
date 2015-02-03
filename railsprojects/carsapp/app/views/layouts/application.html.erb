@@ -22,11 +22,12 @@ body {
 	</div>
 	<div id="navigation">
 		<ul>
-		   <li><%= link_to 'Home'%> </li>
+		   <li><%= link_to 'Home',root_path %> </li>
 	      <li><%= link_to 'Place ad', new_car_path %> </li>
 		  <li><%= link_to 'view cars',cars_path %> </li>
 		   <li><%= link_to 'search cars',new_car_path %> </li>
-		  <li><%= link_to 'Sign up/Sign in',new_user_path %> </li>
+		  <li><%= link_to 'Sign in',signin_path %> </li>
+		  <li><%= link_to 'Sign up',new_user_path %> </li>
 		   <li><%= mail_to 'zaidk2008@hotmail.com',"Contact us" %> </li>
 		</ul>
 	</div>
@@ -38,6 +39,15 @@ body {
 		Mary Regan
 	</div>
 </div>
+<ul>
+	<% if !signed_in? %>
+		<li><%= link_to "Sign In", signin_path %></li>		
+	<% else %>
+		<li>Signed in as <%= @current_user.name %></li>
+		<li><%= link_to "Sign Out", signout_path %></li>
+
+	<%end %>
+
 
 <%= yield %>
 </head>
