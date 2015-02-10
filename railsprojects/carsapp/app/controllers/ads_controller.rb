@@ -1,6 +1,7 @@
 class AdsController < ApplicationController
   # GET /ads
   # GET /ads.json
+  before_filter :only =>[:edit,:destroy,:index2,:new]
   def index
     @ads = Ad.all
 

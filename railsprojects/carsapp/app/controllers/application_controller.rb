@@ -3,9 +3,6 @@ protect_from_forgery
 include ApplicationHelper
 
 
-
-
-
 def authorise
 	unless signed_in?
 		store_location
@@ -26,3 +23,4 @@ def authorise
 		session[:return_to] = request.fullpath
 		end
     end
+	

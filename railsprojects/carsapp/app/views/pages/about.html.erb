@@ -1,2 +1,38 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #989898;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to Find more about us</div>
+<div id="panel">
+<ul style="list-style-type:disc">
+Here are some  useful link about this website 
+  <li><a href="https://www.linkedin.com/pub/zaid-kurchied/66/49b/244?domainCountryName=&csrfToken=guest_token">Created by</a></li>
+  <li><a href="http://www.dit.ie">Company</li>
+  <li><a href="http://www.dit.ie/management/staff/maryregan/">Published by</a></li>
+</ul></div>
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/RRPU_mfhYGA?autoplay=1" frameborder="0" allowfullscreen></iframe></p>
+
+
+</body>

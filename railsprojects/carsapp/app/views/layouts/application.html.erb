@@ -5,13 +5,10 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-<div id="container">
-	<div id="header">
-		<h1>
 		<head>
 <style> 
 body {
-    background-image: url("../assets/rails.jpg"), url("img_flwr.gif");
+    background-image: url("../assets/rails.jpg");
     background-color: #cccccc;
 }
 </style>
@@ -28,17 +25,21 @@ body {
 		   <li><%= link_to 'search cars',new_car_path %> </li>
 		  <li><%= link_to 'Sign in',signin_path %> </li>
 		  <li><%= link_to 'Sign up',new_user_path %> </li>
+		   <li><%= link_to 'About', pages_about_path%> </li>
 		   <li><%= mail_to 'zaidk2008@hotmail.com',"Contact us" %> </li>
 		</ul>
 	</div>
 	<div id="banner">
-	
+		<a href="https://www.facebook.com/Ferrari">
+		<img src="../assets/fb.jpg" height=60 width=70 />
+		
+		<a href="http://instagram.com/luxuryvehicle">
+		<img src="../assets/insta.jpg" height=60 width=70 />
+		
+		<a href="https://twitter.com/ferrariworldad">
+		<img src="../assets/twit.jpg" height=60 width=70 />
 	</div>
-	<div id="footer">
-		Copyright © Site Zaid application, 2015
-		Mary Regan
-	</div>
-</div>
+
 <ul>
 	<% if !signed_in? %>
 		<li><%= link_to "Sign In", signin_path %></li>		
@@ -47,6 +48,7 @@ body {
 		<li><%= link_to "Sign Out", signout_path %></li>
 
 	<%end %>
+
 
 
 <%= yield %>

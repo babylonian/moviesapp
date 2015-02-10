@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
   end
 
@@ -7,7 +8,7 @@ class SessionsController < ApplicationController
 	user = User.find_by_name(params[:name])	
    if user && user.authenticate(params[:password]) 			
 	session[:user_id] = user.id	
- 	redirect_to user		#displays the user/show 
+ 	redirect_to allcars_path		#displays the user/show 
    else  	 		
 	flash.now[:error] = "Invalid name/password combination."      	
 	render 'new'		           #shows the signin page again 

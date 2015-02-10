@@ -1,7 +1,7 @@
 class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
-  
+ before_filter except: [:show, :edit, :destroy]
   def index
     @cars = Car.all
 
@@ -10,7 +10,16 @@ class CarsController < ApplicationController
       format.json { render json: @cars }
     end
   end
+  
+   def index2
+    @cars = Car.all
 
+    respond_to do |format|
+      format.html # index2.html.erb
+      format.json { render json: @cars }
+    end
+  end
+   
   # GET /cars/1
   # GET /cars/1.json
   def show
