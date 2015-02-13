@@ -6,9 +6,8 @@ class Blogmailer < ActionMailer::Base
   #
   #   en.blogmailer.register.subject
   #
-  def register
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
-  end
+  
+  if @user.save
+	Blogmailer.register(@user).deliver
+	end
 end

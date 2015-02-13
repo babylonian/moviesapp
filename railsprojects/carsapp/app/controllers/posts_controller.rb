@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-before_filter :authorise
+	before_filter :authorise
 	def create
      @car = Car.find params[:car_id]
      @post = @car.posts.create params[:post]
@@ -8,6 +8,6 @@ before_filter :authorise
 			respond_to do |format|
 				format.html { redirect_to @car }
 			end
-end
+    end
 
 end
